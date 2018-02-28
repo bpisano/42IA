@@ -687,11 +687,11 @@
             <objects>
                 <viewController storyboardIdentifier="FTMainViewController" id="XfG-lQ-9wD" customClass="FTMainViewController" customModule="_2IA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="332" height="180"/>
+                        <rect key="frame" x="0.0" y="0.0" width="332" height="297"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U2Y-NL-MHb">
-                                <rect key="frame" x="20" y="136" width="292" height="24"/>
+                                <rect key="frame" x="20" y="253" width="292" height="24"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" placeholderString="Ask me anything..." drawsBackground="YES" usesSingleLineMode="YES" id="3pu-N2-hXZ">
                                     <font key="font" metaFont="systemLight" size="20"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -701,36 +701,40 @@
                                     <action selector="executeRequest:" target="XfG-lQ-9wD" id="UwN-xV-jWs"/>
                                 </connections>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jNM-fd-NTp">
-                                <rect key="frame" x="18" y="20" width="296" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Nb4-B7-Vpj"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Response" id="syy-rA-9lr">
-                                    <font key="font" metaFont="systemMedium" size="15"/>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="FR7-TL-UID">
+                                <rect key="frame" x="18" y="216" width="296" height="21"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Response" id="5CG-1D-DNs">
+                                    <font key="font" metaFont="systemMedium" size="17"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Ooc-ZK-Spl">
+                                <rect key="frame" x="0.0" y="0.0" width="332" height="216"/>
+                            </customView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="jNM-fd-NTp" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="0wK-mn-R7M"/>
+                            <constraint firstItem="FR7-TL-UID" firstAttribute="top" secondItem="U2Y-NL-MHb" secondAttribute="bottom" constant="16" id="1nr-bv-X2x"/>
                             <constraint firstItem="U2Y-NL-MHb" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="Ax9-gW-hHA"/>
-                            <constraint firstAttribute="bottom" secondItem="jNM-fd-NTp" secondAttribute="bottom" constant="20" id="IOZ-pM-FXA"/>
+                            <constraint firstAttribute="trailing" secondItem="FR7-TL-UID" secondAttribute="trailing" constant="20" id="V1Q-09-dJP"/>
                             <constraint firstAttribute="trailing" secondItem="U2Y-NL-MHb" secondAttribute="trailing" constant="20" id="VIG-Si-7lm"/>
                             <constraint firstItem="U2Y-NL-MHb" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="arL-ga-Hm4"/>
-                            <constraint firstAttribute="trailing" secondItem="jNM-fd-NTp" secondAttribute="trailing" constant="20" id="kbk-0M-Grm"/>
-                            <constraint firstItem="jNM-fd-NTp" firstAttribute="top" secondItem="U2Y-NL-MHb" secondAttribute="bottom" constant="16" id="mzj-ry-1v3"/>
+                            <constraint firstItem="Ooc-ZK-Spl" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="dDi-P0-TxE"/>
+                            <constraint firstAttribute="bottom" secondItem="Ooc-ZK-Spl" secondAttribute="bottom" id="h4d-n7-MW6"/>
+                            <constraint firstItem="FR7-TL-UID" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="hOV-do-h1V"/>
+                            <constraint firstItem="Ooc-ZK-Spl" firstAttribute="top" secondItem="FR7-TL-UID" secondAttribute="bottom" id="mAl-tF-O3s"/>
+                            <constraint firstAttribute="trailing" secondItem="Ooc-ZK-Spl" secondAttribute="trailing" id="ug2-sE-6Kp"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="askTextField" destination="U2Y-NL-MHb" id="x2z-73-T0l"/>
-                        <outlet property="responseLabel" destination="jNM-fd-NTp" id="HOb-fJ-c7G"/>
+                        <outlet property="containerView" destination="Ooc-ZK-Spl" id="il1-9j-j2K"/>
+                        <outlet property="responseLabel" destination="FR7-TL-UID" id="mjx-rt-lKj"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10" y="493"/>
+            <point key="canvasLocation" x="40" y="259.5"/>
         </scene>
     </scenes>
 </document>

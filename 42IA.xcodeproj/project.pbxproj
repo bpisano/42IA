@@ -15,6 +15,8 @@
 		50E7DC4D2047152E004EABD3 /* FTApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7DC4C2047152E004EABD3 /* FTApi.swift */; };
 		50E7DC4F204715A2004EABD3 /* FTUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7DC4E204715A2004EABD3 /* FTUser.swift */; };
 		50E7DC5120471EDB004EABD3 /* FTResponseTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7DC5020471EDB004EABD3 /* FTResponseTemplate.swift */; };
+		50E7DC5320472CB7004EABD3 /* FTLogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50E7DC5220472CB7004EABD3 /* FTLogView.xib */; };
+		50E7DC5520472CC6004EABD3 /* FTLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7DC5420472CC6004EABD3 /* FTLogView.swift */; };
 		C2B0B731D45D82489A6A50D5 /* Pods_42IA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCCC74F94D7E528A5EDC37D /* Pods_42IA.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		50E7DC4C2047152E004EABD3 /* FTApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTApi.swift; sourceTree = "<group>"; };
 		50E7DC4E204715A2004EABD3 /* FTUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTUser.swift; sourceTree = "<group>"; };
 		50E7DC5020471EDB004EABD3 /* FTResponseTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTResponseTemplate.swift; sourceTree = "<group>"; };
+		50E7DC5220472CB7004EABD3 /* FTLogView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FTLogView.xib; sourceTree = "<group>"; };
+		50E7DC5420472CC6004EABD3 /* FTLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTLogView.swift; sourceTree = "<group>"; };
 		BBCCC74F94D7E528A5EDC37D /* Pods_42IA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_42IA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -76,6 +80,8 @@
 				50E7DC4820470CF4004EABD3 /* FTMainViewController.swift */,
 				50E7DC3C204708C3004EABD3 /* Assets.xcassets */,
 				50E7DC3E204708C3004EABD3 /* Main.storyboard */,
+				50E7DC5420472CC6004EABD3 /* FTLogView.swift */,
+				50E7DC5220472CB7004EABD3 /* FTLogView.xib */,
 				50E7DC41204708C3004EABD3 /* Info.plist */,
 				50E7DC42204708C3004EABD3 /* _2IA.entitlements */,
 			);
@@ -163,6 +169,7 @@
 			files = (
 				50E7DC3D204708C3004EABD3 /* Assets.xcassets in Resources */,
 				50E7DC40204708C3004EABD3 /* Main.storyboard in Resources */,
+				50E7DC5320472CB7004EABD3 /* FTLogView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +244,7 @@
 				50E7DC39204708C3004EABD3 /* AppDelegate.swift in Sources */,
 				50E7DC4D2047152E004EABD3 /* FTApi.swift in Sources */,
 				50E7DC4920470CF4004EABD3 /* FTMainViewController.swift in Sources */,
+				50E7DC5520472CC6004EABD3 /* FTLogView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

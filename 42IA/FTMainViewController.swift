@@ -10,8 +10,9 @@ import Cocoa
 
 class FTMainViewController: NSViewController {
 
-    @IBOutlet weak var askTextField: NSTextField!
+    @IBOutlet weak var containerView: NSView!
     @IBOutlet weak var responseLabel: NSTextField!
+    @IBOutlet weak var askTextField: NSTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,7 @@ class FTMainViewController: NSViewController {
         askTextField.stringValue = ""
         askTextField.becomeFirstResponder()
         responseLabel.alphaValue = 0
+        containerView.alphaValue = 0
     }
     
     @IBAction func executeRequest(_ sender: Any) {
@@ -26,17 +28,60 @@ class FTMainViewController: NSViewController {
             return
         }
         
-        FTRequestHandler().getAnswer(request: askTextField.stringValue) { (error, response) in
+        animateRequest()
+        FTRequestHandler().getAnswer(request: askTextField.stringValue) { (error, response, view) in
             guard error == nil else {
                 print(error!.localizedDescription)
                 return
             }
             
             self.responseLabel.stringValue = response!
-            self.responseLabel.alphaValue = 1
+            self.clearResponseView()
+            self.addResponseView(view)
+            self.animateResponse()
         }
     }
     
+    private func clearResponseView() {
+        for subview in self.containerView.subviews {
+            subview.removeFromSuperview()
+        }
+    }
+    
+    private func addResponseView(_ view: NSView?) {
+        if let view = view {
+            view.frame = CGRect(x: 0, y: 0, width: self.containerView.frame.width, height: self.containerView.frame.height)
+            self.containerView.addSubview(view)
+        }
+    }
+    
+    private func animateResponse() {
+        NSAnimationContext.runAnimationGroup({ (context) in
+            context.duration = 0.2
+            self.responseLabel.animator().alphaValue = 1
+        })
+        
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { (_) in
+            NSAnimationContext.runAnimationGroup({ (context) in
+                context.duration = 0.2
+                self.containerView.animator().alphaValue = 1
+            })
+        }
+    }
+    
+    private func animateRequest() {
+        NSAnimationContext.runAnimationGroup({ (context) in
+            context.duration = 0.2
+            self.responseLabel.animator().alphaValue = 0
+        })
+        
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { (_) in
+            NSAnimationContext.runAnimationGroup({ (context) in
+                context.duration = 0.2
+                self.containerView.animator().alphaValue = 0
+            })
+        }
+    }
 }
 
 

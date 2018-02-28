@@ -11,21 +11,20 @@ import ApiAI
 
 class FTRequestHandler: NSObject {
     
-    func getAnswer(request: String, _ completion: ((_ error: NSError?, _ answer: String?) -> Void)?) {
-        handleRequest(request: request) { (error, response) in
+    func getAnswer(request: String, _ completion: ((_ error: NSError?, _ answer: String?, _ view: NSView?) -> Void)?) {
+        handleRequest(request: request) { (error, response, view) in
             guard error == nil else {
-                completion?(error, nil)
+                completion?(error, nil, nil)
                 return
             }
-            
-            completion?(nil, response)
+            completion?(nil, response, view)
         }
     }
     
-    func handleRequest(request: String, _ completion: ((_ error: NSError?, _ answer: String?) -> Void)?) {
+    private func handleRequest(request: String, _ completion: ((_ error: NSError?, _ answer: String?, _ view: NSView?) -> Void)?) {
         getDataFor(request: request) { (error, intentName, parameters) in
             guard error == nil else {
-                completion?(error, nil)
+                completion?(error, nil, nil)
                 return
             }
             
@@ -35,19 +34,20 @@ class FTRequestHandler: NSObject {
                 let username = (parameters!["User"] as! AIResponseParameter).stringValue
                 FTApi().getUserLocation(username!, { (error, location) in
                     guard error == nil else {
-                        completion?(error! as NSError, nil)
+                        completion?(error! as NSError, nil, nil)
                         return
                     }
                     
-                    completion?(nil, FTResponseTemplate().response(username: username!, location: location))
+                    let response = FTResponseTemplate().response(username: username!, location: location)
+                    completion?(nil, response.response, response.view)
                 })
             default:
-                completion?(nil, "It's a very good question...")
+                completion?(nil, "It's a very good question...", nil)
             }
         }
     }
     
-    func getDataFor(request: String, _ completion: ((_ error: NSError?, _ intentName: String?, _ parameters: [AnyHashable: Any]?) -> Void)?) {
+    private func getDataFor(request: String, _ completion: ((_ error: NSError?, _ intentName: String?, _ parameters: [AnyHashable: Any]?) -> Void)?) {
         let req = ApiAI.shared().textRequest()
         
         req?.query = request
