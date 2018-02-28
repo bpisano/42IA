@@ -8,19 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		50E7DC39204708C3004EABD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7DC38204708C3004EABD3 /* AppDelegate.swift */; };
-		50E7DC3B204708C3004EABD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7DC3A204708C3004EABD3 /* ViewController.swift */; };
 		50E7DC3D204708C3004EABD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50E7DC3C204708C3004EABD3 /* Assets.xcassets */; };
 		50E7DC40204708C3004EABD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50E7DC3E204708C3004EABD3 /* Main.storyboard */; };
+		50E7DC4920470CF4004EABD3 /* FTMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7DC4820470CF4004EABD3 /* FTMainViewController.swift */; };
+		50E7DC4B204713AA004EABD3 /* FTRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7DC4A204713AA004EABD3 /* FTRequestHandler.swift */; };
+		50E7DC4D2047152E004EABD3 /* FTApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7DC4C2047152E004EABD3 /* FTApi.swift */; };
+		50E7DC4F204715A2004EABD3 /* FTUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7DC4E204715A2004EABD3 /* FTUser.swift */; };
+		50E7DC5120471EDB004EABD3 /* FTResponseTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7DC5020471EDB004EABD3 /* FTResponseTemplate.swift */; };
+		C2B0B731D45D82489A6A50D5 /* Pods_42IA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCCC74F94D7E528A5EDC37D /* Pods_42IA.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		400C5320CFA023439D4E27AD /* Pods-42IA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-42IA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-42IA/Pods-42IA.debug.xcconfig"; sourceTree = "<group>"; };
+		41C6F94535D58C35386E00A2 /* Pods-42IA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-42IA.release.xcconfig"; path = "Pods/Target Support Files/Pods-42IA/Pods-42IA.release.xcconfig"; sourceTree = "<group>"; };
 		50E7DC35204708C3004EABD3 /* 42IA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 42IA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E7DC38204708C3004EABD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		50E7DC3A204708C3004EABD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		50E7DC3C204708C3004EABD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50E7DC3F204708C3004EABD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50E7DC41204708C3004EABD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50E7DC42204708C3004EABD3 /* _2IA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = _2IA.entitlements; sourceTree = "<group>"; };
+		50E7DC4820470CF4004EABD3 /* FTMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTMainViewController.swift; sourceTree = "<group>"; };
+		50E7DC4A204713AA004EABD3 /* FTRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTRequestHandler.swift; sourceTree = "<group>"; };
+		50E7DC4C2047152E004EABD3 /* FTApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTApi.swift; sourceTree = "<group>"; };
+		50E7DC4E204715A2004EABD3 /* FTUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTUser.swift; sourceTree = "<group>"; };
+		50E7DC5020471EDB004EABD3 /* FTResponseTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTResponseTemplate.swift; sourceTree = "<group>"; };
+		BBCCC74F94D7E528A5EDC37D /* Pods_42IA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_42IA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2B0B731D45D82489A6A50D5 /* Pods_42IA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +52,8 @@
 			children = (
 				50E7DC37204708C3004EABD3 /* 42IA */,
 				50E7DC36204708C3004EABD3 /* Products */,
+				DC30ACAFD1E689031932C1BE /* Pods */,
+				CBA1DEC9DC20100E96BAB145 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,13 +69,34 @@
 			isa = PBXGroup;
 			children = (
 				50E7DC38204708C3004EABD3 /* AppDelegate.swift */,
-				50E7DC3A204708C3004EABD3 /* ViewController.swift */,
+				50E7DC4C2047152E004EABD3 /* FTApi.swift */,
+				50E7DC4E204715A2004EABD3 /* FTUser.swift */,
+				50E7DC4A204713AA004EABD3 /* FTRequestHandler.swift */,
+				50E7DC5020471EDB004EABD3 /* FTResponseTemplate.swift */,
+				50E7DC4820470CF4004EABD3 /* FTMainViewController.swift */,
 				50E7DC3C204708C3004EABD3 /* Assets.xcassets */,
 				50E7DC3E204708C3004EABD3 /* Main.storyboard */,
 				50E7DC41204708C3004EABD3 /* Info.plist */,
 				50E7DC42204708C3004EABD3 /* _2IA.entitlements */,
 			);
 			path = 42IA;
+			sourceTree = "<group>";
+		};
+		CBA1DEC9DC20100E96BAB145 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBCCC74F94D7E528A5EDC37D /* Pods_42IA.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC30ACAFD1E689031932C1BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				400C5320CFA023439D4E27AD /* Pods-42IA.debug.xcconfig */,
+				41C6F94535D58C35386E00A2 /* Pods-42IA.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,9 +106,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50E7DC45204708C3004EABD3 /* Build configuration list for PBXNativeTarget "42IA" */;
 			buildPhases = (
+				63910F4F8929736272B1ADDD /* [CP] Check Pods Manifest.lock */,
 				50E7DC31204708C3004EABD3 /* Sources */,
 				50E7DC32204708C3004EABD3 /* Frameworks */,
 				50E7DC33204708C3004EABD3 /* Resources */,
+				D51386B0DB4E03F19A3DAE1C /* [CP] Embed Pods Frameworks */,
+				E19A241385B15AC7682BE320 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,13 +168,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		63910F4F8929736272B1ADDD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-42IA-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D51386B0DB4E03F19A3DAE1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-42IA/Pods-42IA-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ApiAI/ApiAI.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ApiAI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-42IA/Pods-42IA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E19A241385B15AC7682BE320 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-42IA/Pods-42IA-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		50E7DC31204708C3004EABD3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50E7DC3B204708C3004EABD3 /* ViewController.swift in Sources */,
+				50E7DC5120471EDB004EABD3 /* FTResponseTemplate.swift in Sources */,
+				50E7DC4B204713AA004EABD3 /* FTRequestHandler.swift in Sources */,
+				50E7DC4F204715A2004EABD3 /* FTUser.swift in Sources */,
 				50E7DC39204708C3004EABD3 /* AppDelegate.swift in Sources */,
+				50E7DC4D2047152E004EABD3 /* FTApi.swift in Sources */,
+				50E7DC4920470CF4004EABD3 /* FTMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +362,7 @@
 		};
 		50E7DC46204708C3004EABD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 400C5320CFA023439D4E27AD /* Pods-42IA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = 42IA/_2IA.entitlements;
@@ -276,6 +378,7 @@
 		};
 		50E7DC47204708C3004EABD3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41C6F94535D58C35386E00A2 /* Pods-42IA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = 42IA/_2IA.entitlements;
