@@ -21,7 +21,11 @@ class FTResponseTemplate: NSObject {
             return (availableTemplates[Int(random)], logView(username: username, location: location))
         }
         else {
-            let unavailableTemplate = ["\(username) is not available."]
+            let unavailableTemplate = [
+                "\(username) is not available.",
+                "\(username) is not at school.",
+                "\(username) is not here. Blackhole is comming...",
+            ]
             let random = arc4random() % UInt32(unavailableTemplate.count)
             return (unavailableTemplate[Int(random)], logView(username: username, location: location))
         }
