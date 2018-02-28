@@ -42,7 +42,7 @@ class FTRequestHandler: NSObject {
                     completion?(nil, response.response, response.view)
                 })
             default:
-                completion?(nil, "It's a very good question...", nil)
+                completion?(nil, "It looks like I was not able to understand a fuckin word 🤔", nil)
             }
         }
     }
