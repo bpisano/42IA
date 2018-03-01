@@ -15,6 +15,7 @@
 		506584262048482D002CF40F /* FTLogIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506584252048482D002CF40F /* FTLogIndicator.swift */; };
 		5065842820484F69002CF40F /* FTExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065842720484F69002CF40F /* FTExampleView.swift */; };
 		5065842A20484FDC002CF40F /* FTExampleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5065842920484FDC002CF40F /* FTExampleView.xib */; };
+		5065842C204860AD002CF40F /* FTEventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065842B204860AD002CF40F /* FTEventMonitor.swift */; };
 		50E7DC39204708C3004EABD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7DC38204708C3004EABD3 /* AppDelegate.swift */; };
 		50E7DC3D204708C3004EABD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50E7DC3C204708C3004EABD3 /* Assets.xcassets */; };
 		50E7DC40204708C3004EABD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50E7DC3E204708C3004EABD3 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		506584252048482D002CF40F /* FTLogIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTLogIndicator.swift; sourceTree = "<group>"; };
 		5065842720484F69002CF40F /* FTExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTExampleView.swift; sourceTree = "<group>"; };
 		5065842920484FDC002CF40F /* FTExampleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FTExampleView.xib; sourceTree = "<group>"; };
+		5065842B204860AD002CF40F /* FTEventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTEventMonitor.swift; sourceTree = "<group>"; };
 		50E7DC35204708C3004EABD3 /* 42IA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 42IA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E7DC38204708C3004EABD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50E7DC3C204708C3004EABD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				50E7DC38204708C3004EABD3 /* AppDelegate.swift */,
+				5065842B204860AD002CF40F /* FTEventMonitor.swift */,
 				50E7DC4C2047152E004EABD3 /* FTApi.swift */,
 				50E7DC4E204715A2004EABD3 /* FTUser.swift */,
 				5065841F20481D3F002CF40F /* FTProject.swift */,
@@ -267,6 +270,7 @@
 				5065841E20480FEC002CF40F /* FTResponse.swift in Sources */,
 				5065842020481D3F002CF40F /* FTProject.swift in Sources */,
 				50E7DC5120471EDB004EABD3 /* FTResponseManager.swift in Sources */,
+				5065842C204860AD002CF40F /* FTEventMonitor.swift in Sources */,
 				50E7DC4B204713AA004EABD3 /* FTRequestHandler.swift in Sources */,
 				50E7DC4F204715A2004EABD3 /* FTUser.swift in Sources */,
 				5065842820484F69002CF40F /* FTExampleView.swift in Sources */,

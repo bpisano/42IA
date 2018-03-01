@@ -23,6 +23,7 @@ class FTMainViewController: NSViewController {
     }
     
     override func viewDidAppear() {
+        NSApplication.shared.activate(ignoringOtherApps: true)
         addResponseView(FTViewManager().exampleView())
     }
     

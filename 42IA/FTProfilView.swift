@@ -21,6 +21,7 @@ class FTProfilView: NSView {
     @IBOutlet weak var locationLabel: NSTextField!
     
     override func awakeFromNib() {
+        staffLabel.wantsLayer = true
         staffLabel.layer?.cornerRadius = 2
         staffLabel.layer?.masksToBounds = true
     }

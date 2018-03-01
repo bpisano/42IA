@@ -78,7 +78,7 @@ class FTApi: NSObject {
     }*/
     
     func getUser(_ username: String, _ completion: ((_ error: Error?, _ user: FTUser?) -> Void)?) {
-        print("[42API] getting \(username) id...")
+        print("[42API] getting \(username) data...")
         
         let url = URL(string: "https://api.intra.42.fr/v2/users/\(username)")
         let head = "Bearer " + FTApi.token
