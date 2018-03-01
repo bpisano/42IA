@@ -20,7 +20,10 @@ class FTMainViewController: NSViewController {
         askTextField.stringValue = ""
         askTextField.becomeFirstResponder()
         responseLabel.alphaValue = 0
-        containerView.alphaValue = 0
+    }
+    
+    override func viewDidAppear() {
+        addResponseView(FTViewManager().exampleView())
     }
     
     @IBAction func quit(_ sender: Any) {

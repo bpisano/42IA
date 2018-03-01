@@ -14,6 +14,7 @@
 		5065842420482324002CF40F /* FTProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065842320482324002CF40F /* FTProfilView.swift */; };
 		506584262048482D002CF40F /* FTLogIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506584252048482D002CF40F /* FTLogIndicator.swift */; };
 		5065842820484F69002CF40F /* FTExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065842720484F69002CF40F /* FTExampleView.swift */; };
+		5065842A20484FDC002CF40F /* FTExampleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5065842920484FDC002CF40F /* FTExampleView.xib */; };
 		50E7DC39204708C3004EABD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7DC38204708C3004EABD3 /* AppDelegate.swift */; };
 		50E7DC3D204708C3004EABD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50E7DC3C204708C3004EABD3 /* Assets.xcassets */; };
 		50E7DC40204708C3004EABD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50E7DC3E204708C3004EABD3 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		5065842320482324002CF40F /* FTProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTProfilView.swift; sourceTree = "<group>"; };
 		506584252048482D002CF40F /* FTLogIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTLogIndicator.swift; sourceTree = "<group>"; };
 		5065842720484F69002CF40F /* FTExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTExampleView.swift; sourceTree = "<group>"; };
+		5065842920484FDC002CF40F /* FTExampleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FTExampleView.xib; sourceTree = "<group>"; };
 		50E7DC35204708C3004EABD3 /* 42IA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 42IA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E7DC38204708C3004EABD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50E7DC3C204708C3004EABD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				5065842320482324002CF40F /* FTProfilView.swift */,
 				5065842120482316002CF40F /* FTProfilView.xib */,
 				5065842720484F69002CF40F /* FTExampleView.swift */,
+				5065842920484FDC002CF40F /* FTExampleView.xib */,
 				50E7DC41204708C3004EABD3 /* Info.plist */,
 				50E7DC42204708C3004EABD3 /* _2IA.entitlements */,
 			);
@@ -188,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5065842A20484FDC002CF40F /* FTExampleView.xib in Resources */,
 				50E7DC3D204708C3004EABD3 /* Assets.xcassets in Resources */,
 				50E7DC40204708C3004EABD3 /* Main.storyboard in Resources */,
 				5065842220482316002CF40F /* FTProfilView.xib in Resources */,

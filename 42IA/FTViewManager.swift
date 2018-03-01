@@ -48,4 +48,17 @@ class FTViewManager: NSObject {
         logView.logIndicator.set(state: location == nil ? .unavailable : .available)
         return logView
     }
+    
+    func exampleView() -> NSView? {
+        var topLevelObjects: NSArray?
+        guard Bundle.main.loadNibNamed(NSNib.Name("FTExampleView"), owner: self, topLevelObjects: &topLevelObjects) else {
+            return nil
+        }
+        
+        guard let exampleView = topLevelObjects!.first(where: { $0 is NSView }) as? FTExampleView else {
+            return nil
+        }
+        
+        return exampleView
+    }
 }
