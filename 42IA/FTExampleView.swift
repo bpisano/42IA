@@ -35,8 +35,9 @@ class FTExampleView: NSView {
                         "Where can I find albarbos ?",
                         "Is bpisano available ?",
                         "Is tle-coza logged ?",
-                        "What is the money of xamartin ?",
+                        "What is the money of jemagnie ?",
                         "Is alruntz at school ?",
+                        "How rich is stpuget ?",
                         "Give me informations about max"]
         for i in 1...3 {
             let random = arc4random() % UInt32(examples.count)

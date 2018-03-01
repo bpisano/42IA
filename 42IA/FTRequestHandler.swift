@@ -69,6 +69,11 @@ class FTRequestHandler: NSObject {
                         return
                     }
                     
+                    guard user!.username != "" else {
+                        completion?(nil, FTResponse(response: "Maybe this user doesn't exist :/", view: nil))
+                        return
+                    }
+                    
                     let response = FTResponseManager().response(intentName: intentName!, parameters: ["user": user, "parameters": parameters])
                     completion?(nil, response)
                 })
