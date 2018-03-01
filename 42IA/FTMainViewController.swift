@@ -39,12 +39,13 @@ class FTMainViewController: NSViewController {
         animateRequest()
         FTRequestHandler().getAnswer(request: askTextField.stringValue) { (error, response) in
             guard error == nil else {
+                self.showError("I'm sorry, an error occured :/")
                 print(error!.localizedDescription)
                 return
             }
             
             guard let response = response else {
-                print("No response")
+                self.showError("I'm sorry, an error occured :/")
                 return
             }
             
@@ -53,6 +54,12 @@ class FTMainViewController: NSViewController {
             self.addResponseView(response.view)
             self.animateResponse()
         }
+    }
+    
+    private func showError(_ error: String) {
+        self.responseLabel.stringValue = error
+        self.clearResponseView()
+        self.animateResponse()
     }
     
     private func clearResponseView() {

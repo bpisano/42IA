@@ -38,18 +38,18 @@ class FTRequestHandler: NSObject {
                     return
                 }
                 
-                FTApi().getUserLocation(username.stringValue, { (error, location) in
+                FTApi().getUser(username.stringValue, { (error, user) in
                     guard error == nil else {
                         completion?(error! as NSError, nil)
                         return
                     }
                     
-                    guard username.stringValue != nil else {
+                    guard user != nil else {
                         completion?(nil, FTResponse(response: "I'm sorry, I was not able to connect to the server :/", view: nil))
                         return
                     }
                     
-                    let response = FTResponseManager().response(intentName: intentName!, parameters: ["username": username.stringValue, "location": location])
+                    let response = FTResponseManager().response(intentName: intentName!, parameters: ["username": username.stringValue, "location": user!.location])
                     completion?(nil, response)
                 })
             case "Profil":
