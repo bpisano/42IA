@@ -687,11 +687,11 @@
             <objects>
                 <viewController storyboardIdentifier="FTMainViewController" id="XfG-lQ-9wD" customClass="FTMainViewController" customModule="_2IA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="332" height="297"/>
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="407"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U2Y-NL-MHb">
-                                <rect key="frame" x="20" y="253" width="292" height="24"/>
+                                <rect key="frame" x="20" y="363" width="334" height="24"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" placeholderString="Ask me anything..." drawsBackground="YES" usesSingleLineMode="YES" id="3pu-N2-hXZ">
                                     <font key="font" metaFont="systemLight" size="20"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -702,27 +702,39 @@
                                 </connections>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="FR7-TL-UID">
-                                <rect key="frame" x="18" y="216" width="296" height="21"/>
+                                <rect key="frame" x="18" y="328" width="338" height="19"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Response" id="5CG-1D-DNs">
-                                    <font key="font" metaFont="systemMedium" size="17"/>
+                                    <font key="font" metaFont="systemMedium" size="15"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="Ooc-ZK-Spl">
-                                <rect key="frame" x="0.0" y="0.0" width="332" height="216"/>
+                                <rect key="frame" x="0.0" y="34" width="374" height="294"/>
                             </customView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ehy-FB-U0J">
+                                <rect key="frame" x="326" y="7" width="40" height="19"/>
+                                <buttonCell key="cell" type="recessed" title="Quit" bezelStyle="recessed" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mB8-w8-Xfh">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="systemBold" size="12"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="quit:" target="XfG-lQ-9wD" id="jDe-AZ-Yhh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="FR7-TL-UID" firstAttribute="top" secondItem="U2Y-NL-MHb" secondAttribute="bottom" constant="16" id="1nr-bv-X2x"/>
                             <constraint firstItem="U2Y-NL-MHb" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="Ax9-gW-hHA"/>
                             <constraint firstAttribute="trailing" secondItem="FR7-TL-UID" secondAttribute="trailing" constant="20" id="V1Q-09-dJP"/>
                             <constraint firstAttribute="trailing" secondItem="U2Y-NL-MHb" secondAttribute="trailing" constant="20" id="VIG-Si-7lm"/>
+                            <constraint firstAttribute="bottom" secondItem="Ehy-FB-U0J" secondAttribute="bottom" constant="8" id="X04-ET-eqW"/>
                             <constraint firstItem="U2Y-NL-MHb" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="arL-ga-Hm4"/>
                             <constraint firstItem="Ooc-ZK-Spl" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="dDi-P0-TxE"/>
-                            <constraint firstAttribute="bottom" secondItem="Ooc-ZK-Spl" secondAttribute="bottom" id="h4d-n7-MW6"/>
                             <constraint firstItem="FR7-TL-UID" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="hOV-do-h1V"/>
                             <constraint firstItem="Ooc-ZK-Spl" firstAttribute="top" secondItem="FR7-TL-UID" secondAttribute="bottom" id="mAl-tF-O3s"/>
+                            <constraint firstItem="Ehy-FB-U0J" firstAttribute="top" secondItem="Ooc-ZK-Spl" secondAttribute="bottom" constant="8" id="oGe-o0-jS2"/>
+                            <constraint firstAttribute="trailing" secondItem="Ehy-FB-U0J" secondAttribute="trailing" constant="8" id="r9q-Kp-Eu6"/>
                             <constraint firstAttribute="trailing" secondItem="Ooc-ZK-Spl" secondAttribute="trailing" id="ug2-sE-6Kp"/>
                         </constraints>
                     </view>
@@ -734,7 +746,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="40" y="259.5"/>
+            <point key="canvasLocation" x="61" y="314.5"/>
         </scene>
     </scenes>
 </document>

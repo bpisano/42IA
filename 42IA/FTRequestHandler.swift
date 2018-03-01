@@ -11,38 +11,69 @@ import ApiAI
 
 class FTRequestHandler: NSObject {
     
-    func getAnswer(request: String, _ completion: ((_ error: NSError?, _ answer: String?, _ view: NSView?) -> Void)?) {
-        handleRequest(request: request) { (error, response, view) in
+    func getAnswer(request: String, _ completion: ((_ error: NSError?, _ response: FTResponse?) -> Void)?) {
+        handleRequest(request: request) { (error, response) in
             guard error == nil else {
-                completion?(error, nil, nil)
+                completion?(error, nil)
                 return
             }
-            completion?(nil, response, view)
+            
+            completion?(nil, response)
         }
     }
     
-    private func handleRequest(request: String, _ completion: ((_ error: NSError?, _ answer: String?, _ view: NSView?) -> Void)?) {
+    private func handleRequest(request: String, _ completion: ((_ error: NSError?, _ response: FTResponse?) -> Void)?) {
         getDataFor(request: request) { (error, intentName, parameters) in
             guard error == nil else {
-                completion?(error, nil, nil)
+                completion?(error, nil)
                 return
             }
             
             print("[ApiAI] Intent name : \(intentName!)")
+            
             switch intentName! {
             case "Log":
-                let username = (parameters!["User"] as! AIResponseParameter).stringValue
-                FTApi().getUserLocation(username!, { (error, location) in
+                guard let username = parameters!["User"] as? AIResponseParameter else {
+                    completion?(nil, nil)
+                    return
+                }
+                
+                FTApi().getUserLocation(username.stringValue, { (error, location) in
                     guard error == nil else {
-                        completion?(error! as NSError, nil, nil)
+                        completion?(error! as NSError, nil)
                         return
                     }
                     
-                    let response = FTResponseTemplate().response(username: username!, location: location)
-                    completion?(nil, response.response, response.view)
+                    guard username.stringValue != nil else {
+                        completion?(nil, FTResponse(response: "I'm sorry, I was not able to connect to the server :/", view: nil))
+                        return
+                    }
+                    
+                    let response = FTResponseManager().response(intentName: intentName!, parameters: ["username": username.stringValue, "location": location])
+                    completion?(nil, response)
+                })
+            case "Profil":
+                guard let username = parameters!["User"] as? AIResponseParameter else {
+                    completion?(nil, nil)
+                    return
+                }
+                
+                FTApi().getUser(username.stringValue, { (error, user) in
+                    guard error == nil else {
+                        completion?(error! as NSError, nil)
+                        return
+                    }
+                    
+                    guard user != nil else {
+                        completion?(nil, FTResponse(response: "Maybe this user doesn't exist :/", view: nil))
+                        return
+                    }
+                    
+                    let response = FTResponseManager().response(intentName: intentName!, parameters: ["user": user, "parameters": parameters])
+                    completion?(nil, response)
                 })
             default:
-                completion?(nil, "It looks like I was not able to understand a fuckin word 🤔", nil)
+                completion?(nil, FTResponse(response: "It looks like I was not able to understand a fuckin word 🤔", view: nil))
             }
         }
     }

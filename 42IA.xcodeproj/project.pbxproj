@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5065841C20480FAC002CF40F /* FTViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065841B20480FAC002CF40F /* FTViewManager.swift */; };
+		5065841E20480FEC002CF40F /* FTResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065841D20480FEC002CF40F /* FTResponse.swift */; };
+		5065842020481D3F002CF40F /* FTProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065841F20481D3F002CF40F /* FTProject.swift */; };
+		5065842220482316002CF40F /* FTProfilView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5065842120482316002CF40F /* FTProfilView.xib */; };
+		5065842420482324002CF40F /* FTProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065842320482324002CF40F /* FTProfilView.swift */; };
+		506584262048482D002CF40F /* FTLogIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506584252048482D002CF40F /* FTLogIndicator.swift */; };
+		5065842820484F69002CF40F /* FTExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065842720484F69002CF40F /* FTExampleView.swift */; };
 		50E7DC39204708C3004EABD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7DC38204708C3004EABD3 /* AppDelegate.swift */; };
 		50E7DC3D204708C3004EABD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50E7DC3C204708C3004EABD3 /* Assets.xcassets */; };
 		50E7DC40204708C3004EABD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50E7DC3E204708C3004EABD3 /* Main.storyboard */; };
@@ -14,7 +21,7 @@
 		50E7DC4B204713AA004EABD3 /* FTRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7DC4A204713AA004EABD3 /* FTRequestHandler.swift */; };
 		50E7DC4D2047152E004EABD3 /* FTApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7DC4C2047152E004EABD3 /* FTApi.swift */; };
 		50E7DC4F204715A2004EABD3 /* FTUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7DC4E204715A2004EABD3 /* FTUser.swift */; };
-		50E7DC5120471EDB004EABD3 /* FTResponseTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7DC5020471EDB004EABD3 /* FTResponseTemplate.swift */; };
+		50E7DC5120471EDB004EABD3 /* FTResponseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7DC5020471EDB004EABD3 /* FTResponseManager.swift */; };
 		50E7DC5320472CB7004EABD3 /* FTLogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50E7DC5220472CB7004EABD3 /* FTLogView.xib */; };
 		50E7DC5520472CC6004EABD3 /* FTLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7DC5420472CC6004EABD3 /* FTLogView.swift */; };
 		C2B0B731D45D82489A6A50D5 /* Pods_42IA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCCC74F94D7E528A5EDC37D /* Pods_42IA.framework */; };
@@ -23,6 +30,13 @@
 /* Begin PBXFileReference section */
 		400C5320CFA023439D4E27AD /* Pods-42IA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-42IA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-42IA/Pods-42IA.debug.xcconfig"; sourceTree = "<group>"; };
 		41C6F94535D58C35386E00A2 /* Pods-42IA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-42IA.release.xcconfig"; path = "Pods/Target Support Files/Pods-42IA/Pods-42IA.release.xcconfig"; sourceTree = "<group>"; };
+		5065841B20480FAC002CF40F /* FTViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTViewManager.swift; sourceTree = "<group>"; };
+		5065841D20480FEC002CF40F /* FTResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTResponse.swift; sourceTree = "<group>"; };
+		5065841F20481D3F002CF40F /* FTProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTProject.swift; sourceTree = "<group>"; };
+		5065842120482316002CF40F /* FTProfilView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FTProfilView.xib; sourceTree = "<group>"; };
+		5065842320482324002CF40F /* FTProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTProfilView.swift; sourceTree = "<group>"; };
+		506584252048482D002CF40F /* FTLogIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTLogIndicator.swift; sourceTree = "<group>"; };
+		5065842720484F69002CF40F /* FTExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTExampleView.swift; sourceTree = "<group>"; };
 		50E7DC35204708C3004EABD3 /* 42IA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 42IA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E7DC38204708C3004EABD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50E7DC3C204708C3004EABD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,7 +47,7 @@
 		50E7DC4A204713AA004EABD3 /* FTRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTRequestHandler.swift; sourceTree = "<group>"; };
 		50E7DC4C2047152E004EABD3 /* FTApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTApi.swift; sourceTree = "<group>"; };
 		50E7DC4E204715A2004EABD3 /* FTUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTUser.swift; sourceTree = "<group>"; };
-		50E7DC5020471EDB004EABD3 /* FTResponseTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTResponseTemplate.swift; sourceTree = "<group>"; };
+		50E7DC5020471EDB004EABD3 /* FTResponseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTResponseManager.swift; sourceTree = "<group>"; };
 		50E7DC5220472CB7004EABD3 /* FTLogView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FTLogView.xib; sourceTree = "<group>"; };
 		50E7DC5420472CC6004EABD3 /* FTLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTLogView.swift; sourceTree = "<group>"; };
 		BBCCC74F94D7E528A5EDC37D /* Pods_42IA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_42IA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,13 +89,20 @@
 				50E7DC38204708C3004EABD3 /* AppDelegate.swift */,
 				50E7DC4C2047152E004EABD3 /* FTApi.swift */,
 				50E7DC4E204715A2004EABD3 /* FTUser.swift */,
+				5065841F20481D3F002CF40F /* FTProject.swift */,
 				50E7DC4A204713AA004EABD3 /* FTRequestHandler.swift */,
-				50E7DC5020471EDB004EABD3 /* FTResponseTemplate.swift */,
+				50E7DC5020471EDB004EABD3 /* FTResponseManager.swift */,
+				5065841B20480FAC002CF40F /* FTViewManager.swift */,
+				5065841D20480FEC002CF40F /* FTResponse.swift */,
 				50E7DC4820470CF4004EABD3 /* FTMainViewController.swift */,
 				50E7DC3C204708C3004EABD3 /* Assets.xcassets */,
 				50E7DC3E204708C3004EABD3 /* Main.storyboard */,
+				506584252048482D002CF40F /* FTLogIndicator.swift */,
 				50E7DC5420472CC6004EABD3 /* FTLogView.swift */,
 				50E7DC5220472CB7004EABD3 /* FTLogView.xib */,
+				5065842320482324002CF40F /* FTProfilView.swift */,
+				5065842120482316002CF40F /* FTProfilView.xib */,
+				5065842720484F69002CF40F /* FTExampleView.swift */,
 				50E7DC41204708C3004EABD3 /* Info.plist */,
 				50E7DC42204708C3004EABD3 /* _2IA.entitlements */,
 			);
@@ -169,6 +190,7 @@
 			files = (
 				50E7DC3D204708C3004EABD3 /* Assets.xcassets in Resources */,
 				50E7DC40204708C3004EABD3 /* Main.storyboard in Resources */,
+				5065842220482316002CF40F /* FTProfilView.xib in Resources */,
 				50E7DC5320472CB7004EABD3 /* FTLogView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,12 +260,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50E7DC5120471EDB004EABD3 /* FTResponseTemplate.swift in Sources */,
+				5065841E20480FEC002CF40F /* FTResponse.swift in Sources */,
+				5065842020481D3F002CF40F /* FTProject.swift in Sources */,
+				50E7DC5120471EDB004EABD3 /* FTResponseManager.swift in Sources */,
 				50E7DC4B204713AA004EABD3 /* FTRequestHandler.swift in Sources */,
 				50E7DC4F204715A2004EABD3 /* FTUser.swift in Sources */,
+				5065842820484F69002CF40F /* FTExampleView.swift in Sources */,
 				50E7DC39204708C3004EABD3 /* AppDelegate.swift in Sources */,
 				50E7DC4D2047152E004EABD3 /* FTApi.swift in Sources */,
 				50E7DC4920470CF4004EABD3 /* FTMainViewController.swift in Sources */,
+				506584262048482D002CF40F /* FTLogIndicator.swift in Sources */,
+				5065841C20480FAC002CF40F /* FTViewManager.swift in Sources */,
+				5065842420482324002CF40F /* FTProfilView.swift in Sources */,
 				50E7DC5520472CC6004EABD3 /* FTLogView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

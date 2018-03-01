@@ -23,21 +23,30 @@ class FTMainViewController: NSViewController {
         containerView.alphaValue = 0
     }
     
+    @IBAction func quit(_ sender: Any) {
+        NSApplication.shared.terminate(sender)
+    }
+    
     @IBAction func executeRequest(_ sender: Any) {
         guard askTextField.stringValue != "" else {
             return
         }
         
         animateRequest()
-        FTRequestHandler().getAnswer(request: askTextField.stringValue) { (error, response, view) in
+        FTRequestHandler().getAnswer(request: askTextField.stringValue) { (error, response) in
             guard error == nil else {
                 print(error!.localizedDescription)
                 return
             }
             
-            self.responseLabel.stringValue = response!
+            guard let response = response else {
+                print("No response")
+                return
+            }
+            
+            self.responseLabel.stringValue = response.response
             self.clearResponseView()
-            self.addResponseView(view)
+            self.addResponseView(response.view)
             self.animateResponse()
         }
     }

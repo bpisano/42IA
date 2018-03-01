@@ -42,6 +42,7 @@ class FTApi: NSObject {
         }
     }
     
+    /*
     func getAllUsers(page: Int, _ completion: ((_ error: Error?, _ users: [FTUser]?) -> Void)?) {
         let url = URL(string: "https://api.intra.42.fr/v2/campus/9/users?page=\(page)&per_page=100")
         let head = "Bearer " + FTApi.token
@@ -73,6 +74,50 @@ class FTApi: NSObject {
                     }
                 })
             })
+        }
+    }*/
+    
+    func getUser(_ username: String, _ completion: ((_ error: Error?, _ user: FTUser?) -> Void)?) {
+        print("[42API] getting \(username) id...")
+        
+        let url = URL(string: "https://api.intra.42.fr/v2/users/\(username)")
+        let head = "Bearer " + FTApi.token
+        var request = URLRequest(url: url!)
+        
+        request.httpMethod = "GET"
+        request.setValue(head, forHTTPHeaderField: "Authorization")
+        
+        Alamofire.request(request).validate().responseJSON { (response) in
+            switch response.result {
+            case .failure(let error):
+                print(error.localizedDescription)
+                completion?(error, nil)
+                return
+            case .success(let value):
+                let jsonValue = JSON(value)
+                let id = jsonValue["id"].stringValue
+                let firstName = jsonValue["first_name"].stringValue
+                let lastName = jsonValue["last_name"].stringValue
+                let email = jsonValue["email"].stringValue
+                let level = jsonValue["cursus_users"][0]["level"].doubleValue
+                let correctionPoints = jsonValue["correction_point"].intValue
+                let wallet = jsonValue["wallet"].intValue
+                let isSatff = jsonValue["staff?"].boolValue
+                let location = jsonValue["location"] == JSON.null ? nil : jsonValue["location"].stringValue
+                let user = FTUser(id: id,
+                                  username: username,
+                                  firstName: firstName,
+                                  lastName: lastName,
+                                  email: email,
+                                  level: level,
+                                  correctionPoints: correctionPoints,
+                                  wallet: wallet,
+                                  isStaff: isSatff,
+                                  location: location,
+                                  projects: [],
+                                  JSONData: jsonValue)
+                completion?(nil, user)
+            }
         }
     }
     
