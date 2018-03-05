@@ -685,7 +685,7 @@
         <!--Main View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController storyboardIdentifier="FTMainViewController" id="XfG-lQ-9wD" customClass="FTMainViewController" customModule="Taylor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController identifier="TLMainViewController" storyboardIdentifier="TLMainViewController" id="XfG-lQ-9wD" customClass="TLMainViewController" customModule="Taylor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="374" height="407"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -714,6 +714,9 @@
                             </customView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ehy-FB-U0J">
                                 <rect key="frame" x="326" y="7" width="40" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="S61-xz-WAZ"/>
+                                </constraints>
                                 <buttonCell key="cell" type="recessed" title="Quit" bezelStyle="recessed" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mB8-w8-Xfh">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
                                     <font key="font" metaFont="systemBold" size="12"/>
